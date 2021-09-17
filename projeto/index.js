@@ -38,3 +38,14 @@ if (recommend === 'S'){
 }else{
     console.log('\nOk, vamos partir para proxima opcao!\n');
 }
+
+//ITEM 3 - buscar livros que já li
+const readBooks = input.question('Deseja visualizar os livros os quais ja li?(S/N): ').toLocaleUpperCase();
+if (readBooks === 'S'){
+  console.log ('\nEstes saos os livros que li: ')
+  const read = books.filter((index) => index.read == true);
+  console.table(read)
+}else{
+  console.log ('\nTudo bem! Quem sabe numa proxima, não é mesmo?!\n')
+}
+
