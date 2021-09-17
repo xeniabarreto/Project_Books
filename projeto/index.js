@@ -33,7 +33,6 @@ if (recommend === 'S'){
     console.log('\nRecomendamos os seguintes livros: ');
     const recommendBook = books.filter( (index)=> index.recommend == true); 
     console.table(recommendBook);
-
 }else{
     console.log('\nOk, vamos partir para proxima opcao!\n');
 }
@@ -71,6 +70,7 @@ if (pageOrder === 'S'){
   console.log ('\nÉ isso ai, voce e como eu, encara qualquer livro!!!');
 }
 
+//FINAL - Solicitação de sugestao e despedida
 const sugestao = input.question('\nAGORA E COM VOCE!\nMe indique um livro que leu e gostou: ').toLocaleUpperCase();
 console.log('\n=======================================\nObrigada pela visita. Volte sempre!!!\n=======================================\n');
 
