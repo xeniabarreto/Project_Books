@@ -53,12 +53,8 @@ if (readBooks === 'S'){
 const wishlist  = input.question('Deseja visualizar minha lista de desejos?(S/N): ').toLocaleUpperCase();
 if(wishlist  === 'S'){
   console.log('\nEstes são os livros da nossa lista de desejo: ');
-
-  function returnWish(books){
-    return books.read === false
-  }
-  const wishBooks = books.filter(returnWish)
-  console.table (wishBooks)
+  const whis = books.filter((index) => index.read == false);
+  console.table(whis)
 
 }else{
   console.log('\nQue pena!\nServiria como dica para um possivel presente de aniversário, rs!\n');
