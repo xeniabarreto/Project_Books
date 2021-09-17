@@ -49,3 +49,19 @@ if (readBooks === 'S'){
   console.log ('\nTudo bem! Quem sabe numa proxima, não é mesmo?!\n')
 }
 
+//ITEM 4 -buscar livros que não li e estão na minha lista de desejos
+const wishlist  = input.question('Deseja visualizar minha lista de desejos?(S/N): ').toLocaleUpperCase();
+if(wishlist  === 'S'){
+  console.log('\nEstes são os livros da nossa lista de desejo: ');
+
+  function returnWish(books){
+    return books.read === false
+  }
+  const wishBooks = books.filter(returnWish)
+  console.table (wishBooks)
+
+}else{
+  console.log('\nQue pena!\nServiria como dica para um possivel presente de aniversário, rs!\n');
+}
+
+
