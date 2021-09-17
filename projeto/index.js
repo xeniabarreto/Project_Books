@@ -1,4 +1,4 @@
-const books = require('./database') 
+const books = require('./database');
 
 const input = require('readline-sync');
 
@@ -10,22 +10,21 @@ const booksTotal = books.length
 console.log(`\n Veja abaixo a lista de meus ${booksTotal} livros disponiveis: `)
 console.table(books)
 
-//ITEM 1 - buscar livros pela categoria 
+//ITEM 1 - buscar livros pela categoria
 const seeBooksGenre = input.question('Deseja encontrar um livro por genero?(S/N): ').toLocaleUpperCase();
 
 if (seeBooksGenre === 'S'){ 
     console.log('\nTemos seguintes generos:\n- AUTOAJUDA\n- BIOGRAFIA\n- PROFISSIONAL ACADEMICO\n- PSICOLOGIA\n- ROMANCE\n');
+    
     const whatsGenre = input.question('Qual genero deseja visualizar? ').toLocaleUpperCase();
     console.log('\nEsses são os livros disponiveis no genero escolhido:');
 
-function genre(books){
-    return books.genre === whatsGenre
-}
-    const foundGenre = books.filter(genre);
-    console.table(foundGenre);
+    const genre = books.filter ((index) => index.genre == whatsGenre);
+    console.table(genre);
 }else{
     console.log('\nNão tem problema! :)\nVamos manter em ordem alfabetica para sua melhor experiencia!\n');
 }
+
 
 //ITEM 2 - buscar livros recomendados para leitura
 const recommend = input.question('Gostaria de alguma recomendacao?(S/N): ').toLocaleUpperCase();
@@ -41,6 +40,7 @@ if (recommend === 'S'){
 
 //ITEM 3 - buscar livros que já li
 const readBooks = input.question('Deseja visualizar os livros os quais ja li?(S/N): ').toLocaleUpperCase();
+
 if (readBooks === 'S'){
   console.log ('\nEstes saos os livros que li: ')
   const read = books.filter((index) => index.read == true);
@@ -51,11 +51,11 @@ if (readBooks === 'S'){
 
 //ITEM 4 -buscar livros que não li e estão na minha lista de desejos
 const wishlist  = input.question('Deseja visualizar minha lista de desejos?(S/N): ').toLocaleUpperCase();
+
 if(wishlist  === 'S'){
   console.log('\nEstes são os livros da nossa lista de desejo: ');
   const whis = books.filter((index) => index.read == false);
   console.table(whis)
-
 }else{
   console.log('\nQue pena!\nServiria como dica para um possivel presente de aniversário, rs!\n');
 }
@@ -67,7 +67,6 @@ if (pageOrder === 'S'){
   console.log('\nSegue os livros ordenados do menor ao maior numero de paginas:');
   books.sort((a,b) => a.page - b.page);
   console.table(books);
-
 }else{
   console.log ('\nÉ isso ai, voce e como eu, encara qualquer livro!!!');
 }
