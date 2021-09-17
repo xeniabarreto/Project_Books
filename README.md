@@ -23,8 +23,16 @@ No arquivo database.js criei e exportei a base no formato **Array de Objetos** c
 ### Exemplo de implementação
 
 
+
 <img src="./img/projeto_books.gif" />
 
+
+
+### Tecnologias utilizadas Back end: 
+
+
+- Java Script
+- Node.js
 
 ### Como sugestão ao projeto foi aderido as seguintes práticas: 
 
@@ -32,6 +40,10 @@ No arquivo database.js criei e exportei a base no formato **Array de Objetos** c
 - Uso de sintaxe ES6.
 - Nome das variáveis em inglês.
 - Inserir 'commit' do código a cada etapa concluída.
+
+
+##  Autora
+  Xênia Barreto
 
 
 ##  Me conheça melhor! 
