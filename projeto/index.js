@@ -64,4 +64,19 @@ if(wishlist  === 'S'){
   console.log('\nQue pena!\nServiria como dica para um possivel presente de aniversário, rs!\n');
 }
 
+//ITEM 5 - buscar livros por ordenação de pagina de forma crescente e em ordem alfabética, caso usuário(a) não escolha a prmeira opção. 
+const pageOrder = input.question('Deseja visualizar os livros por ordem de pagina?(S/N): ').toLocaleUpperCase();
+
+if (pageOrder === 'S'){
+  console.log('\nSegue os livros ordenados do menor ao maior numero de paginas:');
+  books.sort((a,b) => a.page - b.page);
+  console.table(books);
+
+}else{
+  console.log ('\nÉ isso ai, voce e como eu, encara qualquer livro!!!');
+}
+
+const sugestao = input.question('\nAGORA E COM VOCE!\nMe indique um livro que leu e gostou: ').toLocaleUpperCase
+console.log('\n=======================================\nObrigada pela visita. Volte sempre!!!\n=======================================\n')
+
 
