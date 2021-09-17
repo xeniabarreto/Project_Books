@@ -25,4 +25,16 @@ function genre(books){
     console.table(foundGenre);
 }else{
     console.log('\nNão tem problema! :)\nVamos manter em ordem alfabetica para sua melhor experiencia!\n');
-  }
+}
+
+//ITEM 2 - buscar livros recomendados para leitura
+const recommend = input.question('Gostaria de alguma recomendacao?(S/N): ').toLocaleUpperCase();
+
+if (recommend === 'S'){ 
+    console.log('\nRecomendamos os seguintes livros: ');
+    const recommendBook = books.filter( (index)=> index.recommend == true); 
+    console.table(recommendBook)
+
+}else{
+    console.log('\nOk, vamos partir para proxima opcao!\n');
+}
